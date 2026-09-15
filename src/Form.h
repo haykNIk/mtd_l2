@@ -3,7 +3,7 @@
 class Form
 {
 protected:
-    const unsigned int m_offset;
+    unsigned int m_offset;
 
 public:
     Form(unsigned int offset) : m_offset(offset) {}
@@ -20,6 +20,7 @@ public:
     Triangle(unsigned int offset, unsigned int leg_length)
         : Form(offset), m_leg_length(leg_length) {}
     void draw() const override;
+    void setOffset(unsigned int offset);
 };
 
 class Circle : public Form
@@ -30,4 +31,5 @@ public:
     Circle(unsigned int offset, unsigned int radius)
         : Form(offset), m_radius(radius) {}
     void draw() const override;
+    void setOffset(unsigned int offset);
 };

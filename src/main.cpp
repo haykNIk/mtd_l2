@@ -11,6 +11,7 @@ int main()
     Triangle smallTr(7, 4);
     smallTr.draw();
 
+    tr.setOffset(2);
     tr.draw();
     return 0;
 }
