@@ -1,3 +1,6 @@
+/*
+ * @Author: hayknik
+ */
 #include "Form.h"
 
 #include <cmath>
