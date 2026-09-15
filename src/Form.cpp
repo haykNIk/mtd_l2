@@ -3,6 +3,16 @@
 #include <cmath>
 #include <iostream>
 
+void Triangle::setOffset(unsigned int offset)
+{
+    m_offset = offset;
+}
+
+void Circle::setOffset(unsigned int offset)
+{
+    m_offset = offset;
+}
+
 void Triangle::draw() const
 {
     char* spaces = new char[m_offset + 1];
