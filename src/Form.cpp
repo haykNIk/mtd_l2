@@ -1,23 +1,41 @@
+/*
+ * @Author: hayknik
+ */
 #include "Form.h"
 
 #include <cmath>
 #include <iostream>
 
+namespace
+{
+    void fill(char* str, unsigned int len, char c)
+    {
+        for (unsigned int i = 0; i < len; ++i)
+            str[i] = c;
+        str[len] = '\0';
+    }
+}
+
+void Triangle::setOffset(unsigned int offset)
+{
+    m_offset = offset;
+}
+
+void Circle::setOffset(unsigned int offset)
+{
+    m_offset = offset;
+}
+
 void Triangle::draw() const
 {
     char* spaces = new char[m_offset + 1];
-    for (int i = 0; i < m_offset; ++i)
-        spaces[i] = ' ';
-    spaces[m_offset] = '\0';
-    
+    fill(spaces, m_offset, ' ');
+
     char* top = new char[m_leg_length + 1];
-    for(int i=0; i < m_leg_length; ++i)
-        top[i] = '-';
-    top[m_leg_length] = '\0';
-        
-    
+    fill(top, m_leg_length, '-');
+
     std::cout << spaces << '|' << top << std::endl;
-    
+
     for(int i=0; i < m_leg_length; i++)
     {
         std::cout << spaces;
@@ -33,13 +51,11 @@ void Triangle::draw() const
 void Circle::draw() const
 {
     char* spaces = new char[m_offset + 1];
-    for (int i = 0; i < m_offset; ++i)
-        spaces[i] = ' ';
-    spaces[m_offset] = '\0';
-    
+    fill(spaces, m_offset, ' ');
+
     const unsigned int diameter = 2 * m_radius;
     const unsigned int radiusSquared = m_radius * m_radius;
-    
+
     for(int iRow = 0; iRow < diameter; ++iRow)
     {
         std::cout << spaces;
