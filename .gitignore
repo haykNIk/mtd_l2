@@ -5,6 +5,9 @@ CMakeCache.txt
 CMakeFiles/
 .cache/
 
+# Заголовок doctest скачивается при запуске CI, в репозитории не хранится
+doctest.h
+
 # Created by https://www.toptal.com/developers/gitignore/api/c++,visualstudiocode,clion,linux,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=c++,visualstudiocode,clion,linux,macos
 
@@ -177,7 +180,7 @@ fabric.properties
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
