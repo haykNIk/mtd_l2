@@ -16,5 +16,9 @@ int main()
 
     tr.setOffset(2);
     tr.draw();
+
+    // Демонстрация изменения радиуса окружности
+    c.setRadius(9);
+    c.draw();
     return 0;
 }

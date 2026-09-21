@@ -1,0 +1,11 @@
+* 8c16b72 Изменяемый радиус окружности
+* b2b9297 ЛР4: Dockerfile для сборки проекта, nginx-образ и docker-compose
+* b4516a8 Добавление unit-тестов (doctest) в конвейер CI (задание 4.4)
+*   e0bf2da Merge pull request #4 from haykNIk/develop
+|\  
+| | * 931318e Убраны пояснительные комментарии из файлов ЛР4
+| | *   e7eb69b Merge pull request #5 from haykNIk/refactor/comment
+| | |\  
+| | | * d40b324 Комментарии к методу Circle::draw
+| | |/  
+| | * 77ad888 ЛР4: Dockerfile для сборки проекта, nginx-образ и docker-compose

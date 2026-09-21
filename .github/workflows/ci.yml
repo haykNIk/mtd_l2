@@ -17,11 +17,21 @@ jobs:
         with:
           cmake-version: '3.22'
 
+      - name: Download doctest
+        run: |
+          mkdir -p src/tests
+          wget -q https://raw.githubusercontent.com/doctest/doctest/refs/heads/master/doctest/doctest.h \
+            -O src/tests/doctest.h
+          test -s src/tests/doctest.h
+
       - name: Configure
         run: cmake -S src -B build
 
       - name: Build
         run: cmake --build build
+
+      - name: Run unit tests
+        run: ctest --test-dir build --output-on-failure --no-tests=error
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
