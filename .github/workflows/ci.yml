@@ -17,7 +17,6 @@ jobs:
         with:
           cmake-version: '3.22'
 
-      # Заголовок doctest в репозитории не хранится — скачиваем при каждом запуске CI
       - name: Download doctest
         run: |
           mkdir -p src/tests
@@ -31,8 +30,6 @@ jobs:
       - name: Build
         run: cmake --build build
 
-      # --no-tests=error: если цель tests почему-то не собралась,
-      # ctest не должен «молча» завершиться успешно с нулём тестов
       - name: Run unit tests
         run: ctest --test-dir build --output-on-failure --no-tests=error
 
