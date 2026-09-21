@@ -1,0 +1,5 @@
+# Docker-файлы должны иметь LF даже на Windows: CRLF внутри образа
+# ломает shebang и может испортить многострочные инструкции.
+Dockerfile        text eol=lf
+docker-compose.yml text eol=lf
+.dockerignore     text eol=lf
