@@ -26,6 +26,11 @@ void Circle::setOffset(unsigned int offset)
     m_offset = offset;
 }
 
+void Circle::setRadius(unsigned int radius)
+{
+    m_radius = radius;
+}
+
 void Triangle::draw() const
 {
     char* spaces = new char[m_offset + 1];
