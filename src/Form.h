@@ -28,11 +28,12 @@ public:
 
 class Circle : public Form
 {
-    const unsigned int m_radius;
+    unsigned int m_radius;
 
 public:
     Circle(unsigned int offset, unsigned int radius)
         : Form(offset), m_radius(radius) {}
     void draw() const override;
     void setOffset(unsigned int offset);
+    void setRadius(unsigned int radius);
 };
